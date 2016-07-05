@@ -37,4 +37,10 @@ class Crawler():
         else:
             return False
 
-    
+    # verify if an URL contais a Product.
+    # In this domain, product's URL ends with "/p"
+    def isProduct(self,url):
+        if url[-2:]=="/p":
+            return True
+        else:
+            return False

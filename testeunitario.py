@@ -45,8 +45,13 @@ class CrawlerTest(unittest.TestCase):
 		self.assertFalse(self.crawler.isValidUrl(url2), "Not a valid URL.")
 		self.assertFalse(self.crawler.isValidUrl(self.url), "Not a valid URL.")
 		self.assertTrue(self.crawler.isValidUrl(url3), "Not a valid URL.")
-	# Verify if a page is Product page or Normal page
-
+	
+	# Check if a page is Product page or Normal page
+	def testUrlProduct(self):
+		url3 = "http://www.epocacosmeticos.com.br/inner-restore-intensif-senscience-mascara-reconstrutora/p"
+		self.assertTrue(self.crawler.isProduct(url3),"I'ts not a product.")
+		self.assertFalse(self.crawler.isProduct(self.url),"I'ts not a product.")
+		self.assertFalse(self.crawler.isProduct("http://www.epocacosmeticos.com.br/cabelos"),"I'ts not a product.")
 
 	# Get all links from page visited
 
