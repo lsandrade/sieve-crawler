@@ -1,5 +1,8 @@
 
 
+import requests
+
+
 class Crawler():
 
     def ___init___(self):
@@ -10,3 +13,4 @@ class Crawler():
 
     def getUrl(self):
         return self.url
+

@@ -1,4 +1,5 @@
 import unittest
+import requests
 
 from crawler import Crawler
 
@@ -17,6 +18,8 @@ class CrawlerTest(unittest.TestCase):
 		url = "http://www.epocacosmeticos.com.br"
 		self.crawler.setUrl(url)
 		self.assertEqual(self.crawler.getUrl(),url, "Wrong URL.")
+
+		self.assertEqual(requests.get(url).status_code,200, "URL can't be accessed.")
 
 
 if __name__ == '__main__':
