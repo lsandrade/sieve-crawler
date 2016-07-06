@@ -23,3 +23,12 @@ $ python runme.py
 ```
 
 The result will be in 'products.csv' file after running.
+```
+CSV's structure:
+ref - product's code
+name - product's name
+price - product's price. It will be * if product is unavailable
+availablity - product's availability. Yes or no.
+description - product's description
+url - product's url
+```
