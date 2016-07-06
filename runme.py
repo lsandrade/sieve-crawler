@@ -1,6 +1,5 @@
 
 from crawler import Crawler
-from math import sqrt
 import concurrent.futures
 
 # URL
